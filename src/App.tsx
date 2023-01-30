@@ -1,5 +1,5 @@
 import { Header } from './components/Header'
-import { Habit } from './components/Habit'
+import { SummaryTable } from './components/SummaryTable'
 
 import './styles/global.css'
 
@@ -8,7 +8,7 @@ function App () {
     <section className="flex item-center justify-center h-screen w-screen">
       <div className="flex flex-col gap-16 px-6 w-full max-w-5xl">
         <Header />
-        <Habit completed={3} />
+        <SummaryTable />
       </div>
     </section>
   )

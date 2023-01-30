@@ -26,6 +26,8 @@ export const SummaryTable = () => {
           return (
             <HabitDay
               key={summaryDate.toString()}
+              completed={Math.round(Math.random() * 5)}
+              amount={5}
             />
           )
         })}
