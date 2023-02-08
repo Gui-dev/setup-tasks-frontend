@@ -18,15 +18,15 @@ export const HabitDay = ({ date, defaultCompleted = 0, amount = 0 }: HabitDayPro
   const dayOfWeek = dayjs(date).format('dddd')
   const dayAndMonth = dayjs(date).format('DD/MM')
 
-  const amountCompletedChanged = (completed: number) => {
-    setCompleted(completed)
+  const amountCompletedChanged = (totalCompleted: number) => {
+    setCompleted(totalCompleted)
   }
 
   return (
     <Popover.Root>
       <Popover.Trigger
         className={
-          clsx('h-10 w-10 border-2 border-zinc-800 rounded-lg',
+          clsx('h-10 w-10 border-2 border-zinc-800 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background',
             {
               'bg-zinc-900 border-zinc-800': completedPercentage === 0,
               'bg-violet-900 border-violet-700': completedPercentage > 0 && completedPercentage < 20,
@@ -40,7 +40,7 @@ export const HabitDay = ({ date, defaultCompleted = 0, amount = 0 }: HabitDayPro
       />
       <Popover.Portal>
         <Popover.Content
-          className="flex flex-col p-6 min-w-[320px] bg-zinc-900"
+          className="flex flex-col p-6 min-w-[320px] bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background"
         >
           <Popover.Arrow height={8} width={16} className="fill-zinc-900" />
           <span className="font-semibold text-zinc-400">{dayOfWeek}</span>

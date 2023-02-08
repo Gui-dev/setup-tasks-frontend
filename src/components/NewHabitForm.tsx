@@ -65,7 +65,7 @@ export const NewHabitForm = () => {
         id="title"
         placeholder="ex.: Exercícios, dormir bem, etc..."
         autoFocus
-        className="text-white mt-4 p-4 bg-zinc-800 rounded-lg placeholder:text-zinc-400"
+        className="text-white mt-4 p-4 bg-zinc-800 rounded-lg placeholder:text-zinc-400  focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-zinc-900"
         value={title}
         onChange={event => setTitle(event.target.value)}
       />
@@ -87,7 +87,7 @@ export const NewHabitForm = () => {
       })}
       <button
         type="submit"
-        className="flex flex-row items-center justify-center gap-3 font-semibold mt-6 p-4 rounded-lg bg-green-600 hover:bg-green-500"
+        className="flex flex-row items-center justify-center gap-3 font-semibold mt-6 p-4 rounded-lg bg-green-600 hover:bg-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-600  focus:ring-offset-2 focus:ring-offset-zinc-900"
       >
         {!loading
           ? (
